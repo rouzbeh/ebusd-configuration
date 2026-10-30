@@ -65,7 +65,7 @@ model ReadonlyRegister<T> {
 model regcr {}
 
 /**
- * read only register for devices verifying the check byte (e.g. Weishaupt):
+ * read only register sending the real check byte, for devices that may verify it (e.g. Weishaupt WTC burners):
  * the extension is the check byte followed by the register low and high byte,
  * where the check byte is the CRC-8 (polynomial 0x5c, initial value 0) of the register bytes,
  * see https://github.com/john30/ebusd/issues/167
